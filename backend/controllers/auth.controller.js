@@ -1,5 +1,5 @@
 import generateTokenAndSetCookie from "../utils/generateToken.js";
-import User from "./user.model.js";
+import User from "../models/user.model.js";
 import bcrypt from 'bcryptjs'
 
 export const signUpUser = async (req, res) => {
@@ -48,7 +48,6 @@ export const loginUser = async(req,res)=>{
         const {username,password} = req.body;
         const user = await User.findOne({username});
         const isPasswordCorrect =await bcrypt.compare(password,user?.password || "");
-      console.log(isPasswordCorrect)
         if(!user || !isPasswordCorrect){
             return res.status(400).json({error:"Invalid username or password"})
         }
@@ -67,13 +66,13 @@ export const loginUser = async(req,res)=>{
       }
 }
 
-export const logout =async (req,res) =>{
+export const logout = (req,res) =>{
   try{
     res.cookie("jwt","",{maxAge:0})
     res.status(200).json({message:"Logout successfully"})
   }
   catch(err){
-    console.log("Error in logout auth controller", err.message);
+    console.log("Error in logout auth controller", err);
         res.status(500).json({ error: "Internal Server Error" });
   }
 }
