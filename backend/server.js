@@ -5,6 +5,8 @@ import messageRoute from './routes/message.route.js'
 import cookieParser from 'cookie-parser';
 import { connect } from './db/connect.js';
 import { protectedRoute } from './middlewares/protectedRoute.js';
+import userRoute from './routes/user.route.js'
+
 dotenv.config();
 
 const app = express();
@@ -17,6 +19,7 @@ app.get("/",(req,res)=>{
 });
 app.use('/api/auth',authRoute)
 app.use('/api/messages',protectedRoute,messageRoute)
+app.use('/api/users',protectedRoute,userRoute)
 app.listen(PORT,()=>{
     connect(),
     console.log(`app is listening on por ${PORT}`)
