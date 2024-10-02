@@ -21,7 +21,7 @@ This is a real-time chat application built with the MERN stack (MongoDB, Express
 - **JWT (JSON Web Token)**: Used for secure authentication.
 - **Tailwind CSS**: For responsive and utility-first CSS styling.
 
-![Chat App Screenshot](Demo.png)
+![Chat App Screenshot](./Demo.png)
 
 
 1. **Clone the repository:**
