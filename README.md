@@ -1,4 +1,4 @@
-#FullStack Real Time Messaging applicatoin with MERN Stack 
+# FullStack Real Time Messaging applicatoin with MERN Stack 
 This is a real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js) and integrated with Socket.IO for WebSocket functionality. The app allows users to create an account, log in, and chat with other users in real-time.
 
 ## Features
