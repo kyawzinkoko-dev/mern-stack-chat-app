@@ -31,17 +31,17 @@ This is a real-time chat application built with the MERN stack (MongoDB, Express
   cd mern-stack-chat-app
   npm install
 ```
-2.For backend 
+2. **For backend** 
 ``` bash
   cd backend
   npm install
   npm run dev
 ```
-3.For fronend 
+3. **For fronend** 
 ```bash
 cd ..
 cd frontend
 npm install
 npm run dev
 ```
-4.Then navigate to `` http://localhost:3000``
+4. Then navigate to `` http://localhost:3000``
