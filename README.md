@@ -30,6 +30,7 @@ This is a real-time chat application built with the MERN stack (MongoDB, Express
   git clone https://github.com/kyawzinkoko-dev/mern-stack-chat-app
   cd mern-stack-chat-app
   npm install
+  cp .env.example .env
 ```
 2. **For backend** 
 ``` bash
